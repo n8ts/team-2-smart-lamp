@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "author": "team",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-pi-pico", "id": "pico", "top": -10, "left": -10, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": 120, "left": 160, "attrs": { "color": "red" } }
+  ],
+  "connections": [
+    [ "pico:GP15", "led1:A", "green" ],
+    [ "pico:GND.1", "led1:K", "black" ]
+  ]
+}
