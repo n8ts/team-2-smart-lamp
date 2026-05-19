@@ -1,14 +1,27 @@
 {
   "version": 1,
-  "author": "team",
+  "author": "Smart Lamp",
   "editor": "wokwi",
   "parts": [
-    { "type": "wokwi-pi-pico", "id": "pico", "top": -10, "left": -10, "attrs": {} },
-    { "type": "wokwi-led", "id": "led1", "top": 120, "left": 160, "attrs": { "color": "red" } }
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -50,
+      "left": 200,
+      "attrs": {
+        "color": "white"
+      }
+    }
   ],
   "connections": [
-    [ "pico:GP15", "led1:A", "green" ],
-    [ "pico:GND.1", "led1:K", "black" ]
+    ["esp:GND.1", "led1:C", "black", ["v50"]],
+    ["esp:GPIO2", "led1:A", "green", ["v50"]]
   ]
 }
-
